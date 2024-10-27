@@ -351,7 +351,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 97057807823575417, guid: 9921418bedb4b8d489a12e11c7220224, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1117224820768692373, guid: 9921418bedb4b8d489a12e11c7220224, type: 3}
       propertyPath: m_Enabled
@@ -367,15 +367,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2964130324961442325, guid: 9921418bedb4b8d489a12e11c7220224, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4388032725713744183, guid: 9921418bedb4b8d489a12e11c7220224, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4890809140395335442, guid: 9921418bedb4b8d489a12e11c7220224, type: 3}
       propertyPath: m_Layer
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 6811869389078690628, guid: 9921418bedb4b8d489a12e11c7220224, type: 3}
       propertyPath: m_LocalPosition.x
@@ -417,6 +417,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9036355980608461917, guid: 9921418bedb4b8d489a12e11c7220224, type: 3}
+      propertyPath: _groundLayer.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -433,7 +437,7 @@ GameObject:
   - component: {fileID: 1092359424}
   - component: {fileID: 1092359423}
   - component: {fileID: 1092359422}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -566,6 +570,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4125246804767641550, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
       propertyPath: _enemyLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125246804767641550, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
+      propertyPath: _groundLayer.m_Bits
       value: 128
       objectReference: {fileID: 0}
     - target: {fileID: 7675966843539947625, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}

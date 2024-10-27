@@ -62,10 +62,15 @@ public class PlayerData : ScriptableObject
 	[Range(0.01f, 0.5f)] public float jumpInputBufferTime; //Grace period after pressing jump where a jump will be automatically performed once the requirements (eg. being grounded) are met.
 
     [Header("Attack")]
-    public float attackCooldownTime; //Grace period between attacks to prevent starting new attack before previous have finished.
-	
+    public float attackCooldownTime; //Time between attacks to prevent starting new attack before previous have finished.
+    [Space(5)]
+    public float verticalAttackFeedbackForce; //The force applied to the player when his vertical attack hit target.
+    public bool doVerticalAttackFeedback; // On/Off feedback from vertical attack.
+    [Space(5)]
+    public float horisontalAttackFeedbackForce; //The force applied to the player when his horisontal attack hit target.
+    public bool doHorisontalAttackFeedback; // On/Off feedback from horisontal attack.
 
-	//Unity Callback, called when the inspector updates
+    //Unity Callback, called when the inspector updates
     private void OnValidate()
     {
 		//Calculate gravity strength using the formula (gravity = 2 * jumpHeight / timeToJumpApex^2) 

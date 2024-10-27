@@ -16,8 +16,8 @@ MonoBehaviour:
   gravityScale: 4.0774717
   fallGravityMult: 2
   maxFallSpeed: 100
-  fastFallGravityMult: 50
-  maxFastFallSpeed: 1000
+  fastFallGravityMult: 2
+  maxFastFallSpeed: 100
   runMaxSpeed: 10
   runAcceleration: 3
   runAccelAmount: 15
@@ -43,3 +43,7 @@ MonoBehaviour:
   coyoteTime: 0.15
   jumpInputBufferTime: 0.05
   attackCooldownTime: 1
+  verticalAttackFeedbackForce: 25
+  doVerticalAttackFeedback: 1
+  horisontalAttackFeedbackForce: 5
+  doHorisontalAttackFeedback: 1

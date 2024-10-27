@@ -134,8 +134,17 @@ public class PlayerMovement : MonoBehaviour
             //Set attack cooldown
             AttackCooldownTime = Data.attackCooldownTime;
             _isAttacking = false;
-            Attack();
 
+            // Choice attack type
+            if (_moveInput.y < 0){ // check if looking down
+                // if so then perform bottomAttack
+                BottomAttack();
+            }
+            else
+            {
+                // otherwise perform default attack
+                FrontAttack();
+            }
         }
         #endregion
 
@@ -404,14 +413,56 @@ public class PlayerMovement : MonoBehaviour
     #endregion
 
     #region ATTACKS METHODS
-    private void Attack()
+    private void FrontAttack()
+    {
+        ANIM.SetTrigger("Attack");
+        //Front Attack Check
+        if (Physics2D.OverlapBox(_frontAttackCheckPoint.position, _frontAttackCheckSize, 0, _enemyLayer)) //checks if set box overlaps with any Enemy
+        {
+            HorisontalAttackFeedback();
+        }
+    }
+
+    private void BottomAttack()
     {
         ANIM.SetTrigger("Attack");
         //Down Attack Check
         if (Physics2D.OverlapBox(_bottomAttackCheckPoint.position, _bottomAttackCheckSize, 0, _enemyLayer)) //checks if set box overlaps with any Enemy
         {
             _canDoAnotherJump = true; //if so we can do another jump in the air
+            VerticalAttackFeedback();
         }
+    }
+    #endregion
+
+    #region ATTACK FEEDBACK METHODS
+    // Add brief impuls in oposite direction to make attacks feels more natural 
+    private void VerticalAttackFeedback()
+    {
+        if (!Data.doVerticalAttackFeedback)
+            return;
+
+        //We increase the force applied if we are falling
+        //This means we'll always push at the same height
+        float force = Data.verticalAttackFeedbackForce;
+        if (RB.velocity.y < 0)
+            force -= RB.velocity.y;
+
+        RB.AddForce(Vector2.up * force, ForceMode2D.Impulse);
+    }
+
+    private void HorisontalAttackFeedback()
+    {
+        if (!Data.doHorisontalAttackFeedback)
+            return;
+
+        //We increase the force applied if we are running it to target
+        //This means we'll push player away from target or atleast stop player from runing into enemy
+        float force = Data.verticalAttackFeedbackForce;
+        if (Mathf.Abs(RB.velocity.x) > 0)
+            force += Mathf.Abs(RB.velocity.x);
+
+        RB.AddForce(Vector2.left * force * Mathf.Sign(RB.velocity.x), ForceMode2D.Impulse);
     }
     #endregion
 
