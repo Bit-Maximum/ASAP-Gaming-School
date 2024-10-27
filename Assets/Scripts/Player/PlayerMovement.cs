@@ -428,7 +428,6 @@ public class PlayerMovement : MonoBehaviour
         LastOnGroundTime = 0;
         LastOnWallRightTime = 0;
         LastOnWallLeftTime = 0;
-        //_canDoAnotherJump = false;
 
         #region Perform Wall Jump
         Vector2 force = new Vector2(Data.wallJumpForce.x, Data.wallJumpForce.y);
@@ -541,8 +540,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CanWallJump()
     {
-        return (LastPressedJumpTime > 0 && LastOnWallTime > 0 && LastOnGroundTime <= 0 && !IsWallJumping ||
-             (LastOnWallRightTime > 0 && _lastWallJumpDir == 1) || (LastOnWallLeftTime > 0 && _lastWallJumpDir == -1) || _canDoAnotherJump);
+          return (LastPressedJumpTime > 0 && LastOnWallTime > 0 && LastOnGroundTime <= 0 && !IsWallJumping ||
+             (LastOnWallRightTime > 0 && _lastWallJumpDir == 1) || (LastOnWallLeftTime > 0 && _lastWallJumpDir == -1));
     }
 
     private bool CanJumpCut()
