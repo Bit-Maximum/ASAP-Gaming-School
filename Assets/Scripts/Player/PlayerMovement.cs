@@ -17,6 +17,12 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D RB { get; private set; }
     public Animator ANIM;
 
+    ////Equipment
+    public SpriteRenderer leftBoot;  // —сылка на левый ботинок
+    public SpriteRenderer rightBoot; // —сылка на правый ботинок
+
+    private int spriteIterator;
+
     //Variables control the various actions the player can perform at any time.
     //These are fields which can are public allowing for other sctipts to read them
     //but can only be privately written to.
@@ -75,6 +81,11 @@ public class PlayerMovement : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         ANIM = GetComponent<Animator>();
+
+        leftBoot = GameObject.Find("LeftBoot").GetComponent<SpriteRenderer>();
+        rightBoot = GameObject.Find("RightBoot").GetComponent<SpriteRenderer>();
+
+        spriteIterator = 0;
     }
 
     private void Start()
@@ -262,7 +273,7 @@ public class PlayerMovement : MonoBehaviour
         #endregion
     }
 
-    #region INPUT SISTEM
+    #region INPUT SYSTEM
     private void OnMove(InputValue value)
     {
         _moveInput.x = value.Get<Vector2>().x;
@@ -290,6 +301,16 @@ public class PlayerMovement : MonoBehaviour
     {
         if (CanAttack())
             _isAttacking = true;
+    }
+
+    private void OnChangeSprite(InputValue value)
+    {
+        if (spriteIterator > Data.spriteArray.Length - 1)
+            spriteIterator = 0;
+        Debug.Log("Array Lenght: " + Data.spriteArray.Length + "Cur Sprite: " + Data.spriteArray[spriteIterator]);
+        leftBoot.sprite = Data.spriteArray[spriteIterator];
+        rightBoot.sprite = Data.spriteArray[spriteIterator];
+        spriteIterator++;
     }
     #endregion
 

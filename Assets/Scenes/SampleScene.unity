@@ -418,8 +418,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9036355980608461917, guid: 9921418bedb4b8d489a12e11c7220224, type: 3}
+      propertyPath: _enemyLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 9036355980608461917, guid: 9921418bedb4b8d489a12e11c7220224, type: 3}
       propertyPath: _groundLayer.m_Bits
-      value: 0
+      value: 128
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -556,7 +560,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &4803467427227025382
+--- !u!1001 &8973347263353054189
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -568,14 +572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4125246804767641550, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
-      propertyPath: _enemyLayer.m_Bits
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 4125246804767641550, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
-      propertyPath: _groundLayer.m_Bits
-      value: 128
-      objectReference: {fileID: 0}
+    - target: {fileID: 4931684847757227824, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 519420031}
     - target: {fileID: 7675966843539947625, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.64
@@ -627,6 +627,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 4803467427227025382}
+  - {fileID: 8973347263353054189}
   - {fileID: 1092359424}
   - {fileID: 872836679}

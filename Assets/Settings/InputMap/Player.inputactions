@@ -58,6 +58,15 @@
                     "processors": "",
                     "interactions": "Press(behavior=1)",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ChangeSprite",
+                    "type": "Button",
+                    "id": "f4e11c85-ea7d-4a95-a060-30845b4d25a8",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -223,6 +232,17 @@
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
                     "action": "JumpRelease",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5eac1d86-a3cc-47b4-a852-415e5edbb495",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "ChangeSprite",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
