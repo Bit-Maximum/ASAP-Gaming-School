@@ -11164,7 +11164,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 120
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -11179,6 +11179,14 @@ PrefabInstance:
     - target: {fileID: 1193832449322381527, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125246804767641550, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
+      propertyPath: _playerLayer.m_Bits
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125246804767641550, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
+      propertyPath: _platformLayer.m_Bits
+      value: 512
       objectReference: {fileID: 0}
     - target: {fileID: 4931684847757227824, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
       propertyPath: m_Camera

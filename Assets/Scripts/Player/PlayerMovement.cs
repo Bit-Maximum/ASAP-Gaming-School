@@ -75,6 +75,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Layers & Tags")]
     [SerializeField] private LayerMask _groundLayer;
     [SerializeField] private LayerMask _enemyLayer;
+    [SerializeField] private LayerMask _playerLayer;
+    [SerializeField] private LayerMask _platformLayer;
     #endregion
 
     private void Awake()
@@ -284,6 +286,15 @@ public class PlayerMovement : MonoBehaviour
     private void OnLook(InputValue value)
     {
         _moveInput.y = value.Get<Vector2>().y;
+        if (_moveInput.y < 0)
+        {
+            Collider2D platformColited = Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, _platformLayer);
+            if (platformColited)
+            {
+                StartCoroutine(TemporalyDisablePlatformCollision(platformColited));
+            }
+        }
+
     }
 
     private void OnJumpPress(InputValue value)
@@ -502,6 +513,17 @@ public class PlayerMovement : MonoBehaviour
         movement = Mathf.Clamp(movement, -Mathf.Abs(speedDif) * (1 / Time.fixedDeltaTime), Mathf.Abs(speedDif) * (1 / Time.fixedDeltaTime));
 
         RB.AddForce(movement * Vector2.up);
+    }
+
+    private IEnumerator TemporalyDisablePlatformCollision(Collider2D platformCollider)
+    {
+        if (platformCollider)
+        {
+            Collider2D playerCollider = GetComponent<BoxCollider2D>();
+            Physics2D.IgnoreCollision(playerCollider, platformCollider, true);
+            yield return new WaitForSeconds(0.3f);
+            Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
+        }
     }
     #endregion
 

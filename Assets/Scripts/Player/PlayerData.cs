@@ -71,10 +71,11 @@ public class PlayerData : ScriptableObject
     public bool doHorisontalAttackFeedback; // On/Off feedback from horisontal attack.
 
 	[Header("Equipment")]
-    public Sprite[] spriteArray; // Array of boots sprites
+    public Sprite[] spriteArray; // Array of boots spritesv
 
-	//Unity Callback, called when the inspector updates
-	private void OnValidate()
+
+    //Unity Callback, called when the inspector updates
+    private void OnValidate()
     {
 		//Calculate gravity strength using the formula (gravity = 2 * jumpHeight / timeToJumpApex^2) 
 		gravityStrength = -(2 * jumpHeight) / (jumpTimeToApex * jumpTimeToApex);
