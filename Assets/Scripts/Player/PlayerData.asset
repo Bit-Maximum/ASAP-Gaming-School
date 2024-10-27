@@ -34,7 +34,7 @@ MonoBehaviour:
   jumpHangTimeThreshold: 1
   jumpHangAccelerationMult: 0.5
   jumpHangMaxSpeedMult: 2.5
-  wallJumpForce: {x: 2, y: 1}
+  wallJumpForce: {x: 10, y: 20}
   wallJumpRunLerp: 0.5
   wallJumpTime: 1
   doTurnOnWallJump: 1
@@ -43,7 +43,7 @@ MonoBehaviour:
   coyoteTime: 0.15
   jumpInputBufferTime: 0.05
   attackCooldownTime: 0.7
-  verticalAttackFeedbackForce: 25
+  verticalAttackFeedbackForce: 17
   doVerticalAttackFeedback: 1
   horisontalAttackFeedbackForce: 3
   doHorisontalAttackFeedback: 1

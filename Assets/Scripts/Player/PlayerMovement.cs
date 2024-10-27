@@ -82,14 +82,14 @@ public class PlayerMovement : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         ANIM = GetComponent<Animator>();
 
-        leftBoot = GameObject.Find("LeftBoot").GetComponent<SpriteRenderer>();
-        rightBoot = GameObject.Find("RightBoot").GetComponent<SpriteRenderer>();
-
         spriteIterator = 0;
     }
 
     private void Start()
     {
+        leftBoot = GameObject.Find("LeftBoot").GetComponent<SpriteRenderer>();
+        rightBoot = GameObject.Find("RightBoot").GetComponent<SpriteRenderer>();
+
         SetGravityScale(Data.gravityScale);
         IsFacingRight = true;
     }
@@ -307,9 +307,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (spriteIterator > Data.spriteArray.Length - 1)
             spriteIterator = 0;
-        Debug.Log("Array Lenght: " + Data.spriteArray.Length + "Cur Sprite: " + Data.spriteArray[spriteIterator]);
-        leftBoot.sprite = Data.spriteArray[spriteIterator];
-        rightBoot.sprite = Data.spriteArray[spriteIterator];
+
+        if (leftBoot)
+            leftBoot.sprite = Data.spriteArray[spriteIterator];
+
+        if (rightBoot)
+            rightBoot.sprite = Data.spriteArray[spriteIterator];
         spriteIterator++;
     }
     #endregion
@@ -436,7 +439,7 @@ public class PlayerMovement : MonoBehaviour
     #region ATTACKS METHODS
     private void FrontAttack()
     {
-        ANIM.SetTrigger("Attack");
+        ANIM.SetTrigger("AttackFront");
         //Front Attack Check
         if (Physics2D.OverlapBox(_frontAttackCheckPoint.position, _frontAttackCheckSize, 0, _enemyLayer)) //checks if set box overlaps with any Enemy
         {
@@ -446,7 +449,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void BottomAttack()
     {
-        ANIM.SetTrigger("Attack");
+        ANIM.SetTrigger("AttackDown");
         //Down Attack Check
         if (Physics2D.OverlapBox(_bottomAttackCheckPoint.position, _bottomAttackCheckSize, 0, _enemyLayer)) //checks if set box overlaps with any Enemy
         {
