@@ -216,10 +216,10 @@ MonoBehaviour:
   leftBoot: {fileID: 4458591186868446293}
   rightBoot: {fileID: 6887003551309095607}
   _groundCheckPoint: {fileID: 9108148937355637790}
-  _groundCheckSize: {x: 1.45, y: 0.05}
+  _groundCheckSize: {x: 1.45, y: 0.2}
   _frontWallCheckPoint: {fileID: 4639784915007815706}
   _backWallCheckPoint: {fileID: 3055839729125347916}
-  _wallCheckSize: {x: 0.22, y: 1}
+  _wallCheckSize: {x: 0.46, y: 1}
   _frontAttackCheckPoint: {fileID: 2733394859442854796}
   _frontAttackCheckSize: {x: 2.52, y: 1}
   _bottomAttackCheckPoint: {fileID: 1576109815636087973}
@@ -232,10 +232,10 @@ MonoBehaviour:
     m_Bits: 256
   _playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   _platformLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
 --- !u!95 &4717901623031995804
 Animator:
   serializedVersion: 5

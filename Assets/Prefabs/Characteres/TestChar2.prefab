@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5220363328940281563}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: FrontWallCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 5064127983521478217}
   - component: {fileID: 9036355980608461917}
   - component: {fileID: 4409677306211528756}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: TestChar2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62,7 +62,7 @@ Transform:
   m_GameObject: {fileID: 2964130324961442325}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.046, y: -2.787, z: 0}
+  m_LocalPosition: {x: 4.15, y: -3.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -78,7 +78,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2964130324961442325}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -141,7 +141,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 86ca59b9bca0e409b9ba2784fbe69f01, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -161,7 +161,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2964130324961442325}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -239,6 +239,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: 49c2e564db46b934691951484cdac723, type: 2}
   ANIM: {fileID: 4409677306211528756}
+  leftBoot: {fileID: 0}
+  rightBoot: {fileID: 0}
   _groundCheckPoint: {fileID: 753089473080825032}
   _groundCheckSize: {x: 1.1, y: 0.05}
   _frontWallCheckPoint: {fileID: 5220363328940281563}
@@ -250,8 +252,14 @@ MonoBehaviour:
   _bottomAttackCheckSize: {x: 0.5, y: 1}
   _groundLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 128
   _enemyLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  _playerLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  _platformLayer:
     serializedVersion: 2
     m_Bits: 0
 --- !u!95 &4409677306211528756
@@ -284,7 +292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4430140280404985022}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: BackWallCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +323,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 753089473080825032}
-  m_Layer: 3
+  m_Layer: 8
   m_Name: GroundCheckPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
