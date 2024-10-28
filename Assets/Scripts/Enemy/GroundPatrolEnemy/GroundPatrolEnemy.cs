@@ -110,6 +110,7 @@ public class GroundPatrolEnemy : MonoBehaviour
     {
         if (CanMoveOn())
         {
+            Debug.Log(Vector2.right * Mathf.Sign(transform.localScale.x));
             OnMove(Vector2.right * Mathf.Sign(transform.localScale.x));
         } else
         {
@@ -333,6 +334,7 @@ public class GroundPatrolEnemy : MonoBehaviour
     #region RUN METHODS
     private void Run(float lerpAmount)
     {
+        Debug.Log("Run");
         //Calculate the direction we want to move in and our desired velocity
         float targetSpeed = _moveInput.x * Data.runMaxSpeed;
         //We can reduce are control using Lerp() this smooths changes to are direction and speed
@@ -373,6 +375,8 @@ public class GroundPatrolEnemy : MonoBehaviour
         //Calculate force along x-axis to apply to the player
 
         float movement = speedDif * accelRate;
+
+        Debug.Log("movement * Vector2.right: " + movement * Vector2.right);
 
         //Convert this to a vector and apply to rigidbody
         RB.AddForce(movement * Vector2.right, ForceMode2D.Force);
@@ -565,14 +569,19 @@ public class GroundPatrolEnemy : MonoBehaviour
     private bool CanMoveOn()
     {
         //Ground Check
-        if (Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, _groundLayer) && !IsJumping) //checks if set box overlaps with ground
+        if (Physics2D.OverlapBox(_groundCheckPoint.position, _groundCheckSize, 0, _groundLayer) && !IsJumping)
+        {
             //Cliff Check
-            if (Physics2D.OverlapBox(_cliffCheckPoint.position, _cliffCheckSize, 0, _groundLayer))
-                //Right Wall Check
+            if (!Physics2D.OverlapBox(_cliffCheckPoint.position, _cliffCheckSize, 0, _groundLayer))
+            {
+                //Front Wall Check
                 if (!(((Physics2D.OverlapBox(_frontWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && IsFacingRight)
-                        || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !IsFacingRight)) && !IsWallJumping))
+                        || (Physics2D.OverlapBox(_backWallCheckPoint.position, _wallCheckSize, 0, _groundLayer) && !IsFacingRight)) && !IsWallJumping)) {
                     return true;
-        return false;
+                }
+            }
+        }
+            return false;
     }
 
     #region ANIMATOR FUNCTIONS
