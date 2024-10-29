@@ -22,7 +22,16 @@ public class EnemyAttack : MonoBehaviour
     public float aggroRange;
     public float attackRange;
     public float chaseSpeed;
-    public Transform player;
+
+    public int attackDamage = 1;
+    
+
+    [SerializeField] public Transform player;
+    [SerializeField] private Transform _frontAttackCheckPoint;
+    [SerializeField] private Vector2 _frontAttackCheckSize = new Vector2(0.5f, 1f);
+
+    [SerializeField] private LayerMask _playerLayer;
+
 
     public void Awake()
     {
@@ -91,12 +100,29 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
+    public void Attack()
+    {
+        //checks if set box overlaps with Player
+        Collider2D player = Physics2D.OverlapBox(_frontAttackCheckPoint.position, _frontAttackCheckSize, 0, _playerLayer);
+        if (player) 
+        {
+            PlayerStatus playerStatus = player.GetComponent<PlayerStatus>();
+            if (playerStatus)
+            {
+                playerStatus.TakeDamage(attackDamage);
+            }
+        }
+    }
+
+
     private void OnDrawGizmosSelected()
     {
         if (!player)
             return;
 
-        Gizmos.color = Color.red;
+        Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, aggroRange);
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireCube(_frontAttackCheckPoint.position, _frontAttackCheckSize);
     }
 }
