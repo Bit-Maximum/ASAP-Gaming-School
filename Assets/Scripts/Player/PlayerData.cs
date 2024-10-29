@@ -63,6 +63,7 @@ public class PlayerData : ScriptableObject
 
     [Header("Attack")]
     public float attackCooldownTime; //Time between attacks to prevent starting new attack before previous have finished.
+    public int attackDamage; //Time between attacks to prevent starting new attack before previous have finished.
     [Space(5)]
     public float verticalAttackFeedbackForce; //The force applied to the player when his vertical attack hit target.
     public bool doVerticalAttackFeedback; // On/Off feedback from vertical attack.

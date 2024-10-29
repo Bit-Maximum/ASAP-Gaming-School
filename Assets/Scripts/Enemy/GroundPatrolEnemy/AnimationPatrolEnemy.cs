@@ -12,6 +12,7 @@ public class AnimetionPatrolEnemy : MonoBehaviour
     [SerializeField] public string aggroTrigetParameter;
     [SerializeField] public string runFloatParameter;
     [SerializeField] public string lostTargetBoolParameter;
+    [SerializeField] public string stunEndedTrigerParameter;
 
     private void Awake()
     {
@@ -36,6 +37,11 @@ public class AnimetionPatrolEnemy : MonoBehaviour
     public void TrigerAggroTriger()
     {
         ANIM.SetTrigger(aggroTrigetParameter);
+    }
+
+    public void TrigerStunEndedTriger()
+    {
+        ANIM.SetTrigger(stunEndedTrigerParameter);
     }
 
     public void UpdateRunAnimation(float currentSpeed)

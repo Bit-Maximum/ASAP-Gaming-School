@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EnemyAttack : MonoBehaviour
 {
     private AnimetionPatrolEnemy AnimationControl;
+    private EnemyStatus enemyStatus;
 
     private float LastSwingTime;
     private float LastHurtTime;
@@ -36,6 +37,7 @@ public class EnemyAttack : MonoBehaviour
     public void Awake()
     {
         AnimationControl = GetComponent<AnimetionPatrolEnemy>();
+        enemyStatus = GetComponent<EnemyStatus>();
     }
 
     private void Update()
@@ -47,55 +49,57 @@ public class EnemyAttack : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        if (Vector2.Distance(transform.position, player.position) <= aggroRange)
+        if (!enemyStatus.IsStuned)
         {
-            IsAggro = true;
-        }
-        else
-        {
-            IsAggro = false;
-            IsSwing = false;
-            IsAttack = false;
-        }
-
-        if (IsAggro)
-        {
-            if (Vector2.Distance(transform.position, player.position) > attackRange)
+            if (Vector2.Distance(transform.position, player.position) <= aggroRange)
             {
-                AnimationControl.SetLostTargetPrarametr(true);
-                IsSwing = false;
-                IsAttack = false;
-
-                if (transform.position.y < player.position.y)
-                {
-                    // Set new Y-position to current Y-height to prevent enemy from flying towards the player
-                    Vector3 targetPossition = new Vector3(player.position.x, transform.position.y, transform.position.z);
-                    transform.position = Vector2.MoveTowards(transform.position, targetPossition, chaseSpeed * Time.fixedDeltaTime);
-                }
-                transform.position = Vector2.MoveTowards(transform.position, player.position, chaseSpeed * Time.fixedDeltaTime);
+                IsAggro = true;
             }
             else
             {
-                AnimationControl.SetLostTargetPrarametr(false);
-                if (!IsSwing && IsAttack && LastSwingTime < 0)
-                {
-                    AnimationControl.TrigerAttackAnimation();
-                    LastAttackTime = AttackCooldownTime;
-                    IsAttack = false;
-                } 
-                else if (!IsAttack && IsSwing && LastAttackTime < 0)
-                {
-                    AnimationControl.TrigerAttackSwingAnimation();
-                    LastSwingTime = AttackSwingDurationTime;
-                    IsSwing = false;
-                    IsAttack = true;
-                }
-                else if (!IsSwing && !IsAttack)
-                {
-                    IsSwing = true;
-                }
+                IsAggro = false;
+                IsSwing = false;
+                IsAttack = false;
+            }
 
+            if (IsAggro)
+            {
+                if (Vector2.Distance(transform.position, player.position) > attackRange)
+                {
+                    AnimationControl.SetLostTargetPrarametr(true);
+                    IsSwing = false;
+                    IsAttack = false;
+
+                    if (transform.position.y < player.position.y)
+                    {
+                        // Set new Y-position to current Y-height to prevent enemy from flying towards the player
+                        Vector3 targetPossition = new Vector3(player.position.x, transform.position.y, transform.position.z);
+                        transform.position = Vector2.MoveTowards(transform.position, targetPossition, chaseSpeed * Time.fixedDeltaTime);
+                    }
+                    transform.position = Vector2.MoveTowards(transform.position, player.position, chaseSpeed * Time.fixedDeltaTime);
+                }
+                else
+                {
+                    AnimationControl.SetLostTargetPrarametr(false);
+                    if (!IsSwing && IsAttack && LastSwingTime < 0)
+                    {
+                        AnimationControl.TrigerAttackAnimation();
+                        LastAttackTime = AttackCooldownTime;
+                        IsAttack = false;
+                    }
+                    else if (!IsAttack && IsSwing && LastAttackTime < 0)
+                    {
+                        AnimationControl.TrigerAttackSwingAnimation();
+                        LastSwingTime = AttackSwingDurationTime;
+                        IsSwing = false;
+                        IsAttack = true;
+                    }
+                    else if (!IsSwing && !IsAttack)
+                    {
+                        IsSwing = true;
+                    }
+
+                }
             }
         }
     }
@@ -103,13 +107,18 @@ public class EnemyAttack : MonoBehaviour
     public void Attack()
     {
         //checks if set box overlaps with Player
-        Collider2D player = Physics2D.OverlapBox(_frontAttackCheckPoint.position, _frontAttackCheckSize, 0, _playerLayer);
+        Collider2D collider = Physics2D.OverlapBox(_frontAttackCheckPoint.position, _frontAttackCheckSize, 0, _playerLayer);
         if (player) 
         {
-            PlayerStatus playerStatus = player.GetComponent<PlayerStatus>();
+            PlayerStatus playerStatus = collider.GetComponent<PlayerStatus>();
             if (playerStatus)
             {
                 playerStatus.TakeDamage(attackDamage);
+
+                int attackDirection = 1;
+                if (player.position.x < transform.position.x)
+                    attackDirection = -1;
+                playerStatus.StunAttackPlayer(attackDirection);
             }
         }
     }

@@ -6,6 +6,7 @@ public class PatrolEnemy : MonoBehaviour
 
     private EnemyAttack attackBehavior;
     private AnimetionPatrolEnemy AnimationControl;
+    private EnemyStatus enemyStatus;
 
     public Transform _checkPoint;
     public float cliffCheckRayDistance;
@@ -15,7 +16,7 @@ public class PatrolEnemy : MonoBehaviour
 
     public float maxSpeed;
     public float maxFallSpeed;
-    private bool IsFacingRight = true;
+    public bool IsFacingRight = false;
 
     public LayerMask _groundLayer;
 
@@ -24,6 +25,7 @@ public class PatrolEnemy : MonoBehaviour
     {
         attackBehavior = GetComponent<EnemyAttack>();
         AnimationControl = GetComponent<AnimetionPatrolEnemy>();
+        enemyStatus = GetComponent<EnemyStatus>();
     }
 
     private void FixedUpdate()
@@ -34,39 +36,44 @@ public class PatrolEnemy : MonoBehaviour
             transform.Translate(Vector2.down * Time.fixedDeltaTime * maxFallSpeed);
         }
 
-        // Flip to face Player
-        if (attackBehavior.IsAggro)
+        if (!enemyStatus.IsStuned)
         {
-            if (attackBehavior.player.position.x < transform.position.x && IsFacingRight)
+            // Flip to face Player
+            if (attackBehavior.IsAggro)
             {
-                transform.eulerAngles = new Vector3(0, 0, 0);
-                IsFacingRight = !IsFacingRight;
-            } 
-            else if (attackBehavior.player.position.x > transform.position.x && !IsFacingRight)
-            {
-                transform.eulerAngles = new Vector3(0, 180, 0);
-                IsFacingRight = !IsFacingRight;
-            }
-        }
-
-        // Otherwise start patrol
-        if (!attackBehavior.IsAggro)
-        {
-            transform.Translate(Vector2.left * Time.fixedDeltaTime * maxSpeed);
-
-            RaycastHit2D hit = Physics2D.Raycast(_checkPoint.position, Vector2.down, cliffCheckRayDistance, _groundLayer);
-
-            if (!hit)
-            {
-                if (IsFacingRight)
+                if (attackBehavior.player.position.x < transform.position.x && IsFacingRight)
+                {   
+                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    IsFacingRight = !IsFacingRight;
+                }
+                else if (attackBehavior.player.position.x > transform.position.x && !IsFacingRight)
                 {
                     transform.eulerAngles = new Vector3(0, 180, 0);
+                    IsFacingRight = !IsFacingRight;
                 }
-                else
+            }
+
+            // Otherwise start patrol
+            if (!attackBehavior.IsAggro)
+            {
+                transform.Translate(Vector2.left * Time.fixedDeltaTime * maxSpeed);
+
+                RaycastHit2D hit = Physics2D.Raycast(_checkPoint.position, Vector2.down, cliffCheckRayDistance, _groundLayer);
+
+                if (!hit)
                 {
-                    transform.eulerAngles = new Vector3(0, 0, 0);
+                    if (!IsFacingRight)
+                    {
+                        transform.eulerAngles = new Vector3(0, 180, 0);
+                        IsFacingRight = !IsFacingRight;
+                    }
+                    else
+                    {
+                        transform.eulerAngles = new Vector3(0, 0, 0);
+                        IsFacingRight = !IsFacingRight;
+                    }
+                    
                 }
-                IsFacingRight = !IsFacingRight;
             }
         }
     }

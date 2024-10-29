@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     //Next, drag it into the slot in playerMovement on your player
 
     public PlayerData Data;
+    public PlayerStatus playerStatus;
 
     #region Variables
     //Components
@@ -83,6 +84,7 @@ public class PlayerMovement : MonoBehaviour
     {
         RB = GetComponent<Rigidbody2D>();
         ANIM = GetComponent<Animator>();
+        playerStatus = GetComponent<PlayerStatus>();
 
         spriteIterator = 0;
     }
@@ -451,8 +453,14 @@ public class PlayerMovement : MonoBehaviour
     {
         ANIM.SetTrigger("AttackFront");
         //Front Attack Check
-        if (Physics2D.OverlapBox(_frontAttackCheckPoint.position, _frontAttackCheckSize, 0, _enemyLayer)) //checks if set box overlaps with any Enemy
+        Collider2D enemy = Physics2D.OverlapBox(_frontAttackCheckPoint.position, _frontAttackCheckSize, 0, _enemyLayer);
+        if (enemy) //checks if set box overlaps with any Enemy
         {
+            EnemyStatus enemyStatus = enemy.GetComponent<EnemyStatus>();
+            playerStatus.ChangeScoreMultyplier(1);
+            playerStatus.ChageScore(enemyStatus.GetScore());
+            enemyStatus.TakeDamage(Data.attackDamage);
+
             HorisontalAttackFeedback();
         }
     }
@@ -461,8 +469,14 @@ public class PlayerMovement : MonoBehaviour
     {
         ANIM.SetTrigger("AttackDown");
         //Down Attack Check
-        if (Physics2D.OverlapBox(_bottomAttackCheckPoint.position, _bottomAttackCheckSize, 0, _enemyLayer)) //checks if set box overlaps with any Enemy
+        Collider2D enemy = Physics2D.OverlapBox(_bottomAttackCheckPoint.position, _bottomAttackCheckSize, 0, _enemyLayer);
+        if (enemy) //checks if set box overlaps with any Enemy
         {
+            EnemyStatus enemyStatus = enemy.GetComponent<EnemyStatus>();
+            playerStatus.ChangeScoreMultyplier(1);
+            playerStatus.ChageScore(enemyStatus.GetScore());
+            enemyStatus.TakeDamage(Data.attackDamage);
+
             _canDoAnotherJump = true; //if so we can do another jump in the air
             VerticalAttackFeedback();
         }
