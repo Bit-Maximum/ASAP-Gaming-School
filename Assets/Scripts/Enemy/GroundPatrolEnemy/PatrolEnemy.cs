@@ -4,6 +4,9 @@ using UnityEngine.TextCore;
 public class PatrolEnemy : MonoBehaviour
 {
 
+    private EnemyAttack attackBehavior;
+    private AnimetionPatrolEnemy AnimationControl;
+
     public Transform checkPoint;
     public float groundCheckRayDistance;
 
@@ -12,11 +15,11 @@ public class PatrolEnemy : MonoBehaviour
 
     public LayerMask _groundLayer;
 
-    private EnemyAttack attackBehavior;
 
     private void Awake()
     {
         attackBehavior = GetComponent<EnemyAttack>();
+        AnimationControl = GetComponent<AnimetionPatrolEnemy>();
     }
 
     private void FixedUpdate()

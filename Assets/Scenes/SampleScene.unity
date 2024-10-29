@@ -36777,6 +36777,35 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9921418bedb4b8d489a12e11c7220224, type: 3}
+--- !u!1 &2026552532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2462775879130995687, guid: 72904b565639a274b91eecf8d7ef6ad0, type: 3}
+  m_PrefabInstance: {fileID: 1080764544709265531}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &2026552534 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4833384786265065004, guid: 72904b565639a274b91eecf8d7ef6ad0, type: 3}
+  m_PrefabInstance: {fileID: 1080764544709265531}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2026552540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026552532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d532d98c2d4374da02dcffb760ad07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ANIM: {fileID: 2026552534}
+  attackSwingTrigetParameter: AttackSwing
+  attackTrigetParameter: Attack
+  hurtTrigetParameter: TakeDamage
+  aggroTrigetParameter: Aggro
+  runFloatParameter: Run
+  lostTargetBoolParameter: LostTarget
 --- !u!1 &2114485167
 GameObject:
   m_ObjectHideFlags: 0
@@ -38017,6 +38046,18 @@ PrefabInstance:
       propertyPath: attackRange
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 3342910301943694797, guid: 72904b565639a274b91eecf8d7ef6ad0, type: 3}
+      propertyPath: HurtDurationTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3342910301943694797, guid: 72904b565639a274b91eecf8d7ef6ad0, type: 3}
+      propertyPath: AttackCooldownTime
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3342910301943694797, guid: 72904b565639a274b91eecf8d7ef6ad0, type: 3}
+      propertyPath: AttackSwingDurationTime
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8860274540657290582, guid: 72904b565639a274b91eecf8d7ef6ad0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 73.06
@@ -38060,7 +38101,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2462775879130995687, guid: 72904b565639a274b91eecf8d7ef6ad0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2026552540}
   m_SourcePrefab: {fileID: 100100000, guid: 72904b565639a274b91eecf8d7ef6ad0, type: 3}
 --- !u!1001 &5571172586398299175
 PrefabInstance:
