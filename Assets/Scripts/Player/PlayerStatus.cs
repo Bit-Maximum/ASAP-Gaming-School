@@ -10,6 +10,7 @@ public class PlayerStatus : MonoBehaviour
     private Rigidbody2D RB;
 
     [SerializeField] private GlobalLightManager globalLight;
+    [SerializeField] private GameManager gameManager;
 
     [SerializeField] private TMP_Text ScoreText;
     [SerializeField] private TMP_Text ComboText;
@@ -225,7 +226,12 @@ public class PlayerStatus : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Player died :(");
-        gameObject.SetActive(false);
+        ANIM.SetTrigger("Die");
+    }
+
+    public void Destroy()
+    {
+        gameManager.PlayerDied();
+        //gameObject.SetActive(false);
     }
 }

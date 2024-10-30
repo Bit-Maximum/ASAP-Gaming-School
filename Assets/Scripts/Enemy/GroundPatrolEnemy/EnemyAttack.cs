@@ -131,6 +131,8 @@ public class EnemyAttack : MonoBehaviour
 
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, aggroRange);
+        Gizmos.color = Color.magenta;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.color = Color.red;
         Gizmos.DrawWireCube(_frontAttackCheckPoint.position, _frontAttackCheckSize);
     }

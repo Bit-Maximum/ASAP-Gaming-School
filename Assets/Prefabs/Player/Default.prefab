@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4184919610501586038}
   - component: {fileID: 348780287244232814}
   - component: {fileID: 1829119644996315634}
+  - component: {fileID: 3275944931913368807}
   m_Layer: 10
   m_Name: TaranCollider
   m_TagString: Untagged
@@ -130,6 +131,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &3275944931913368807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284084775992416796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2a1dcd80d34ac54d8847ca4192f0a93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 4125246804767641550}
+  damageFromTaran: 1
 --- !u!1 &1193832449322381527
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +160,7 @@ GameObject:
   - component: {fileID: 2757884227945475786}
   - component: {fileID: 4125246804767641550}
   - component: {fileID: 4717901623031995804}
+  - component: {fileID: 3530564388180456004}
   m_Layer: 3
   m_Name: Default
   m_TagString: Untagged
@@ -343,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Data: {fileID: 11400000, guid: 49c2e564db46b934691951484cdac723, type: 2}
+  playerStatus: {fileID: 3530564388180456004}
   ANIM: {fileID: 4717901623031995804}
   leftBoot: {fileID: 4458591186868446293}
   rightBoot: {fileID: 6887003551309095607}
@@ -388,6 +405,35 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &3530564388180456004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193832449322381527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e865a816002c1a47b742bebb477c1fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalLight: {fileID: 0}
+  gameManager: {fileID: 0}
+  ScoreText: {fileID: 0}
+  ComboText: {fileID: 0}
+  BallsLeftText: {fileID: 0}
+  HealthText: {fileID: 0}
+  score: 0
+  scoreBaseMultyplier: 1
+  maxHealth: 3
+  ballsLeft: 3
+  comboDurationTime: 3
+  stunByAttackDurationTime: 0.3
+  stunByTaranDurationTime: 0.9
+  StunnedSlowTimeScale: 0.5
+  StunnedSlowTimeDuration: 0.7
+  TakeAttackDamageFeedbackForce: {x: 10, y: 5}
+  TakeTaranDamageFeedbackForce: {x: 7, y: 10}
 --- !u!1 &1349493558641746948
 GameObject:
   m_ObjectHideFlags: 0

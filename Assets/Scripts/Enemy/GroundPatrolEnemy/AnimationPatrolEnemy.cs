@@ -13,6 +13,7 @@ public class AnimetionPatrolEnemy : MonoBehaviour
     [SerializeField] public string runFloatParameter;
     [SerializeField] public string lostTargetBoolParameter;
     [SerializeField] public string stunEndedTrigerParameter;
+    [SerializeField] public string dieTrigerParameter;
 
     private void Awake()
     {
@@ -42,6 +43,11 @@ public class AnimetionPatrolEnemy : MonoBehaviour
     public void TrigerStunEndedTriger()
     {
         ANIM.SetTrigger(stunEndedTrigerParameter);
+    }
+
+    public void TrigerDieTriger()
+    {
+        ANIM.SetTrigger(dieTrigerParameter);
     }
 
     public void UpdateRunAnimation(float currentSpeed)

@@ -74,7 +74,11 @@ public class EnemyStatus : MonoBehaviour
 
     private void Die()
     {
-        Debug.Log("Enemy died :(");
+        ANIM.TrigerDieTriger();
+    }
+
+    public void Destroy()
+    {
         gameObject.SetActive(false);
     }
 }

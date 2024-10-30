@@ -43,6 +43,7 @@ MonoBehaviour:
   coyoteTime: 0.15
   jumpInputBufferTime: 0.05
   attackCooldownTime: 0.7
+  attackDamage: 1
   verticalAttackFeedbackForce: 17
   doVerticalAttackFeedback: 1
   horisontalAttackFeedbackForce: 3

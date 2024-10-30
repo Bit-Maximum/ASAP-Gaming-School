@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1419628608260492094
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4158698345280431419}
+  m_Layer: 8
+  m_Name: CroundCheckPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4158698345280431419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419628608260492094}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -1.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8860274540657290582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1808865458883554980
 GameObject:
   m_ObjectHideFlags: 0
@@ -25,7 +56,7 @@ Transform:
   m_GameObject: {fileID: 1808865458883554980}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.15, y: -1.31, z: 0}
+  m_LocalPosition: {x: -1.3, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -46,6 +77,8 @@ GameObject:
   - component: {fileID: 6581090152004455175}
   - component: {fileID: 4833384786265065004}
   - component: {fileID: 3342910301943694797}
+  - component: {fileID: 6937949192954825074}
+  - component: {fileID: 4313277366840484144}
   m_Layer: 8
   m_Name: GroundPatrolEnemy
   m_TagString: Untagged
@@ -61,12 +94,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2462775879130995687}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 73.06, y: 78.47, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 46.578033, y: 0.37005615, z: -0.04416967}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2191843691878082388}
+  - {fileID: 5786756711650037833}
+  - {fileID: 4158698345280431419}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5553664442389658204
@@ -205,9 +240,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d60b6dba0a9e44a43932f387db315f4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkPoint: {fileID: 2191843691878082388}
-  groundCheckRayDistance: 0.5
+  _checkPoint: {fileID: 2191843691878082388}
+  cliffCheckRayDistance: 0.7
+  _groundCheckPoint: {fileID: 4158698345280431419}
+  _groundCheckSize: {x: 1.38, y: 0.06}
   maxSpeed: 4
+  maxFallSpeed: 10
+  IsFacingRight: 0
   _groundLayer:
     serializedVersion: 2
     m_Bits: 640
@@ -244,8 +283,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2005dcb045c840547b31423a8edb98e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackSwingDurationTime: 2
+  HurtDurationTime: 1
+  AttackCooldownTime: 5
   IsAggro: 0
+  IsAttack: 0
+  IsSwing: 0
   aggroRange: 10
   attackRange: 3
   chaseSpeed: 1
+  attackDamage: 1
   player: {fileID: 0}
+  _frontAttackCheckPoint: {fileID: 5786756711650037833}
+  _frontAttackCheckSize: {x: 2.5, y: 1}
+  _playerLayer:
+    serializedVersion: 2
+    m_Bits: 8
+--- !u!114 &6937949192954825074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2462775879130995687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d532d98c2d4374da02dcffb760ad07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ANIM: {fileID: 4833384786265065004}
+  attackSwingTrigetParameter: AttackSwing
+  attackTrigetParameter: Attack
+  hurtTrigetParameter: TakeDamage
+  aggroTrigetParameter: Aggro
+  runFloatParameter: Run
+  lostTargetBoolParameter: LostTarget
+  stunEndedTrigerParameter: StunEnded
+  dieTrigerParameter: 
+--- !u!114 &4313277366840484144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2462775879130995687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22734274d307c74f9ca395bbfbacd44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 10
+  scoreMultyplier: 1
+  maxHealth: 5
+  StunDuration: 2
+  IsStuned: 0
+--- !u!1 &3480886123885450334
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5786756711650037833}
+  m_Layer: 8
+  m_Name: FrontAttackCheckPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5786756711650037833
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3480886123885450334}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.83, y: -0.57, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8860274540657290582}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
