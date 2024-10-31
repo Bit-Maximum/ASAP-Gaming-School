@@ -19,8 +19,10 @@ public class PlayerMovement : MonoBehaviour
     public Animator ANIM;
 
     ////Equipment
-    public SpriteRenderer leftBoot;  // —сылка на левый ботинок
-    public SpriteRenderer rightBoot; // —сылка на правый ботинок
+    public bool IsEnteractive = false;
+    public SpriteRenderer leftBoot;  //
+    public SpriteRenderer rightBoot; //
+    [SerializeField] public GameObject bootsLogic; // 
 
     private int spriteIterator;
 
@@ -72,6 +74,9 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Vector2 _frontAttackCheckSize = new Vector2(0.5f, 1f);
     [SerializeField] private Transform _bottomAttackCheckPoint;
     [SerializeField] private Vector2 _bottomAttackCheckSize = new Vector2(0.5f, 1f);
+    [Space(5)]
+    [SerializeField] private Transform _interactiveCheckPoint;
+    [SerializeField] private Vector2 _interactiveCheckSize = new Vector2(0.5f, 1f);
 
     [Header("Layers & Tags")]
     [SerializeField] private LayerMask _groundLayer;
@@ -327,6 +332,16 @@ public class PlayerMovement : MonoBehaviour
         if (rightBoot)
             rightBoot.sprite = Data.spriteArray[spriteIterator];
         spriteIterator++;
+    }
+
+    private void OnEnteractPress(InputValue value)
+    {
+        IsEnteractive = true;
+    }
+
+    private void OnEnteractRelease(InputValue value)
+    {
+        IsEnteractive = false;
     }
     #endregion
 

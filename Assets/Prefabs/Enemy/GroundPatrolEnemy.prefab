@@ -319,7 +319,7 @@ MonoBehaviour:
   runFloatParameter: Run
   lostTargetBoolParameter: LostTarget
   stunEndedTrigerParameter: StunEnded
-  dieTrigerParameter: 
+  dieTrigerParameter: Die
 --- !u!114 &4313277366840484144
 MonoBehaviour:
   m_ObjectHideFlags: 0

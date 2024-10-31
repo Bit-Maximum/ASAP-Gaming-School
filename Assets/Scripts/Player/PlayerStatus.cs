@@ -21,6 +21,8 @@ public class PlayerStatus : MonoBehaviour
     [SerializeField] private int scoreBaseMultyplier = 1;
     [SerializeField] private int maxHealth = 3;
     [SerializeField] private int ballsLeft = 3;
+    
+    public int ballsCounter = 0;
 
     [SerializeField] private int comboDurationTime;
     [SerializeField] private float stunByAttackDurationTime;
@@ -44,15 +46,14 @@ public class PlayerStatus : MonoBehaviour
     {
         ANIM = GetComponent<Animator>();
         RB = GetComponent<Rigidbody2D>();
-    }
 
-    private void Start()
-    {
         ChageScore(0);
         DropScoreMultyplier();
         TakeDamage(0);
         ShowBallsLeft();
-    }
+
+        ballsCounter = 0;
+}
 
     private void Update()
     {
@@ -63,13 +64,16 @@ public class PlayerStatus : MonoBehaviour
 
     private void FixedUpdate()
     {
+        //if (maxHealth < 1)
+        //    Die();
+
         if (IsStunned && LastStunnedTime < 0)
         {
             ANIM.SetTrigger("StunEnded");
             IsStunned = false;
         }
 
-        if (LastComboTime < 0)
+        if (scoreMultyplier > scoreBaseMultyplier && LastComboTime < 0)
         {
             ChangeScoreMultyplier(-1);
         }
@@ -103,8 +107,8 @@ public class PlayerStatus : MonoBehaviour
 
     public void DropScoreMultyplier()
     {
-        scoreMultyplier = comboDurationTime;
-        if (scoreMultyplier >= 1)
+        scoreMultyplier = scoreBaseMultyplier;
+        if (scoreMultyplier > 1)
         {
             ComboText.text = $"{scoreMultyplier}xCombo";
         } else
@@ -131,6 +135,13 @@ public class PlayerStatus : MonoBehaviour
     public void UpdateBallsLeftCounter()
     {
         --ballsLeft;
+        ++ballsCounter;
+        BallsLeftText.text = $"Осталось клубков: {ballsLeft}";
+    }
+
+    public void SetBallsLeftCounter(int newValue)
+    {
+        ballsLeft = newValue;
         BallsLeftText.text = $"Осталось клубков: {ballsLeft}";
     }
 

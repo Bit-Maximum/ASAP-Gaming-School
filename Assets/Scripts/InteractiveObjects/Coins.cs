@@ -1,17 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Coins : MonoBehaviour
 {
     [SerializeField] public int score;
-
-    private LevelManager levelManager;
-
-    public void SetLevelManager(LevelManager manager)
-    {
-        levelManager = manager;
-    }
+    [SerializeField] private PlayerStatus levelManager;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
