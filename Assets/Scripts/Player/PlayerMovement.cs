@@ -39,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
     public float LastOnWallTime { get; private set; }
     public float LastOnWallRightTime { get; private set; }
     public float LastOnWallLeftTime { get; private set; }
+    public float LastAccelerateTime { get; private set; }
 
     //Jump
     private bool _isJumpCut;
@@ -51,6 +52,8 @@ public class PlayerMovement : MonoBehaviour
 
     //Animator
     private bool IsJumpAnimStarted;
+    private bool IsSprintAnimStarted;
+    private bool IsSprinting;
 
     private Vector2 _moveInput;
     public float LastPressedJumpTime { get; private set; }
@@ -113,6 +116,7 @@ public class PlayerMovement : MonoBehaviour
 
         LastPressedJumpTime -= Time.deltaTime;
         AttackCooldownTime -= Time.deltaTime;
+        LastAccelerateTime -= Time.deltaTime;
         #endregion
     }
 
@@ -155,16 +159,17 @@ public class PlayerMovement : MonoBehaviour
             AttackCooldownTime = Data.attackCooldownTime;
             _isAttacking = false;
 
+            FrontAttack();
             // Choice attack type
-            if (_moveInput.y < 0){ // check if looking down
-                // if so then perform bottomAttack
-                BottomAttack();
-            }
-            else
-            {
-                // otherwise perform default attack
-                FrontAttack();
-            }
+            //if (_moveInput.y < 0){ // check if looking down
+            //    // if so then perform bottomAttack
+            //    BottomAttack();
+            //}
+            //else
+            //{
+            //    // otherwise perform default attack
+            //    FrontAttack();
+            //}
         }
         #endregion
 
@@ -270,6 +275,20 @@ public class PlayerMovement : MonoBehaviour
         #endregion
 
         #region RUN HANDLER
+        if ((IsSprinting || IsSprintAnimStarted) && (RB.velocity.x == 0 && Mathf.Abs(_moveInput.x) < 0.2f))
+        {
+            ANIM.SetBool("Sprinting", false);
+            IsSprintAnimStarted = false;
+            IsSprinting = false;
+        }
+
+        if (IsSprintAnimStarted && LastAccelerateTime < 0)
+        {
+            IsSprinting = true;
+            IsSprintAnimStarted = false;
+            ANIM.SetBool("Sprinting", true);
+        }
+
         //Handle Run
         if (IsWallJumping)
             Run(Data.wallJumpRunLerp);
@@ -287,7 +306,16 @@ public class PlayerMovement : MonoBehaviour
     {
         _moveInput.x = value.Get<Vector2>().x;
         if (!IsJumping && !IsWallJumping)
+        {
             ANIM.SetFloat("Run", Mathf.Abs(_moveInput.x));
+            if (!IsSprintAnimStarted && LastAccelerateTime < 0)
+            {
+                LastAccelerateTime = 0.3f;
+                IsSprintAnimStarted = true;
+            }
+        }
+
+        
     }
 
     private void OnLook(InputValue value)
@@ -476,6 +504,7 @@ public class PlayerMovement : MonoBehaviour
             playerStatus.ChageScore(enemyStatus.GetScore());
             enemyStatus.TakeDamage(Data.attackDamage);
 
+            _canDoAnotherJump = true; //if so we can do another jump in the air
             HorisontalAttackFeedback();
         }
     }
