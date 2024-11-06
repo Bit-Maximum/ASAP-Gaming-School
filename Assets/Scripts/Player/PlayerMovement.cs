@@ -86,6 +86,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask _enemyLayer;
     [SerializeField] private LayerMask _playerLayer;
     [SerializeField] private LayerMask _platformLayer;
+    [SerializeField] private LayerMask _InteractiveLayer;
     #endregion
 
     private void Awake()
@@ -506,6 +507,16 @@ public class PlayerMovement : MonoBehaviour
 
             _canDoAnotherJump = true; //if so we can do another jump in the air
             HorisontalAttackFeedback();
+        }
+
+        Collider2D item = Physics2D.OverlapBox(_frontAttackCheckPoint.position, _frontAttackCheckSize, 0, _InteractiveLayer);
+        if (item) //checks if set box overlaps with any Enemy
+        {
+            Flashlight flashlight = item.GetComponent<Flashlight>();
+            //flashlight.SetDisabled();
+            playerStatus.ChangeScoreMultyplier(1);
+
+            _canDoAnotherJump = true; //if so we can do another jump in the air
         }
     }
 
