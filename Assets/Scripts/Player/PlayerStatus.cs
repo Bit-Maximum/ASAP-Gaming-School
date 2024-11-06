@@ -64,8 +64,8 @@ public class PlayerStatus : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //if (maxHealth < 1)
-        //    Die();
+        if (maxHealth < 1)
+            Die();
 
         if (IsStunned && LastStunnedTime < 0)
         {
