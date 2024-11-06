@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.U2D;
 
 public class PlayerForseField : MonoBehaviour
@@ -17,5 +18,19 @@ public class PlayerForseField : MonoBehaviour
             player.playerStatus.TakeDamage(damageFromTaran);
             player.playerStatus.StunTaranPlayer(collisionDirection);
         }
+
+        if (collision.TryGetComponent<HidenArea>(out HidenArea HA))
+        {
+            HA.SetTransparent();
+        }
     }
+
+    public void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.TryGetComponent<HidenArea>(out HidenArea HA))
+        {
+            HA.SetVisible();
+        }
+    }
+
 }

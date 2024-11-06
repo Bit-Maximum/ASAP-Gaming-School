@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -28,8 +26,13 @@ public class LevelTeleport : MonoBehaviour
                 NextLevel.SetActive(true);
                 player.transform.position = startingPosition.position;
                 player.GetComponent<PlayerStatus>().SetBallsLeftCounter(newBallsCounter);
-                globalLight.color = NextLevelColor;
                 currentLevel.SetActive(false);
+                Flashlight[] flashlights = FindObjectsOfType<Flashlight>();
+                for (int i = 0; i < flashlights.Length; ++i)
+                {
+                    flashlights[i].SetActive();
+                }
+                globalLight.color = NextLevelColor;
             }
         }
     }
