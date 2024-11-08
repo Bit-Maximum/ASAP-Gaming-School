@@ -5,6 +5,12 @@ using UnityEngine;
 public class LevelComplite : MonoBehaviour
 {
     [SerializeField] private GameManager gameManager;
+    private AudioManager audioManager;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -13,6 +19,7 @@ public class LevelComplite : MonoBehaviour
             if (playerMovement.IsEnteractive)
             {
                 gameManager.StopTheGame();
+                audioManager.PlayMusic(audioManager.VictoryMusic);
                 gameManager.PlayerWin();
             }
         }

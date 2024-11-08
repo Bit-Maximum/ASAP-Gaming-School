@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private List<GameObject> LevelsList;
     [SerializeField] private PlayerData playerData;
     [SerializeField] private PlayerStatus playerStatus;
+    [SerializeField] private string nextScene;
 
     [SerializeField] private GameObject victoryScreen;
     [SerializeField] private TMP_Text victoryScore;
@@ -77,7 +78,7 @@ public class GameManager : MonoBehaviour
     {
         ResetValues();
         ResumeTheGame();
-        SceneManager.LoadScene("Scene2");
+        SceneManager.LoadScene(nextScene);
     }
 
     public void ReturnToMenu()

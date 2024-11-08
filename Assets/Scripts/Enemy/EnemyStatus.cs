@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyStatus : MonoBehaviour
 {
     private AnimetionPatrolEnemy ANIM;
+    private AudioManager audioManager;
 
     [SerializeField] private int score = 1;
     [SerializeField] private int scoreMultyplier = 1;
@@ -18,6 +19,7 @@ public class EnemyStatus : MonoBehaviour
     private void Awake()
     {
         ANIM = GetComponent<AnimetionPatrolEnemy>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     private void Update()
@@ -37,6 +39,7 @@ public class EnemyStatus : MonoBehaviour
     #region Setters
     public void TakeDamage(int amount)
     {
+        audioManager.PlaySFX(audioManager.EnHurt);
         ANIM.TrigerHurtAnimation();
         LastStunedTime = StunDuration;
         IsStuned = true;

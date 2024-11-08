@@ -7,6 +7,7 @@ public class EnemyAttack : MonoBehaviour
 {
     private AnimetionPatrolEnemy AnimationControl;
     private EnemyStatus enemyStatus;
+    private AudioManager audioManager;
 
     private float LastSwingTime;
     private float LastHurtTime;
@@ -38,6 +39,8 @@ public class EnemyAttack : MonoBehaviour
     {
         AnimationControl = GetComponent<AnimetionPatrolEnemy>();
         enemyStatus = GetComponent<EnemyStatus>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+
     }
 
     private void Update()
@@ -106,6 +109,8 @@ public class EnemyAttack : MonoBehaviour
 
     public void Attack()
     {
+        audioManager.PlaySFX(audioManager.EnFrontAttack);
+
         //checks if set box overlaps with Player
         Collider2D collider = Physics2D.OverlapBox(_frontAttackCheckPoint.position, _frontAttackCheckSize, 0, _playerLayer);
         if (player) 

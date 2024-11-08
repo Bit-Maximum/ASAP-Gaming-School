@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     //Components
     public Rigidbody2D RB { get; private set; }
     public Animator ANIM;
+    private AudioManager audioManager;
 
     ////Equipment
     public bool IsEnteractive = false;
@@ -94,6 +95,7 @@ public class PlayerMovement : MonoBehaviour
         RB = GetComponent<Rigidbody2D>();
         ANIM = GetComponent<Animator>();
         playerStatus = GetComponent<PlayerStatus>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
 
         spriteIterator = 0;
     }
@@ -425,10 +427,10 @@ public class PlayerMovement : MonoBehaviour
         //Calculate force along x-axis to apply to the player
 
         float movement = speedDif * accelRate;
-
         //Convert this to a vector and apply to rigidbody
         RB.AddForce(movement * Vector2.right, ForceMode2D.Force);
-
+        if (RB.velocity.x != 0)
+            audioManager.PlayColapsSFX(audioManager.Walk);
         /*
 		 * For those interested here is what AddForce() will do
 		 * RB.velocity = new Vector2(RB.velocity.x + (Time.fixedDeltaTime  * speedDif * accelRate) / RB.mass, RB.velocity.y);
@@ -455,6 +457,7 @@ public class PlayerMovement : MonoBehaviour
         LastOnGroundTime = 0;
         _canDoAnotherJump = false;
 
+        audioManager.PlaySFX(audioManager.Jump);
         #region Perform Jump
         //We increase the force applied if we are falling
         //This means we'll always feel like we jump the same amount 
@@ -475,6 +478,7 @@ public class PlayerMovement : MonoBehaviour
         LastOnWallRightTime = 0;
         LastOnWallLeftTime = 0;
 
+        audioManager.PlaySFX(audioManager.Jump);
         #region Perform Wall Jump
         Vector2 force = new Vector2(Data.wallJumpForce.x, Data.wallJumpForce.y);
         force.x *= dir; //apply force in opposite direction of wall
@@ -495,6 +499,7 @@ public class PlayerMovement : MonoBehaviour
     #region ATTACKS METHODS
     private void FrontAttack()
     {
+        audioManager.PlaySFX(audioManager.FrontAttack);
         ANIM.SetTrigger("AttackFront");
         //Front Attack Check
         Collider2D enemy = Physics2D.OverlapBox(_frontAttackCheckPoint.position, _frontAttackCheckSize, 0, _enemyLayer);
@@ -522,6 +527,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void BottomAttack()
     {
+        audioManager.PlaySFX(audioManager.FrontAttack);
         ANIM.SetTrigger("AttackDown");
         //Down Attack Check
         Collider2D enemy = Physics2D.OverlapBox(_bottomAttackCheckPoint.position, _bottomAttackCheckSize, 0, _enemyLayer);

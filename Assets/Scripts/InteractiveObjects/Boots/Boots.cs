@@ -6,10 +6,16 @@ public class Boots : MonoBehaviour
 {
     [SerializeField] public Sprite bootSprite;
     [SerializeField] private GameObject bootsLogic;
+    private AudioManager audioManager;
 
     private float PikedDelay = 1.5f;
     private float LastPickedTime = 0;
     private bool isReady = true;
+
+    private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Update()
     {
@@ -30,6 +36,8 @@ public class Boots : MonoBehaviour
             {
                 if (player.IsEnteractive)
                 {
+                    audioManager.PlaySFX(audioManager.PickUp);
+
                     LastPickedTime = PikedDelay;
                     isReady = false;
 

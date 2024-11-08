@@ -8,6 +8,7 @@ public class PlayerStatus : MonoBehaviour
 {
     private Animator ANIM;
     private Rigidbody2D RB;
+    private AudioManager audioManager;
 
     [SerializeField] private GlobalLightManager globalLight;
     [SerializeField] private GameManager gameManager;
@@ -46,6 +47,7 @@ public class PlayerStatus : MonoBehaviour
     {
         ANIM = GetComponent<Animator>();
         RB = GetComponent<Rigidbody2D>();
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
 
         ChageScore(0);
         DropScoreMultyplier();
@@ -93,6 +95,7 @@ public class PlayerStatus : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
+        audioManager.PlaySFX(audioManager.Hurt);
         maxHealth -= amount;
         if (maxHealth <= 0)
             Die();
@@ -237,6 +240,7 @@ public class PlayerStatus : MonoBehaviour
 
     private void Die()
     {
+        audioManager.PlayMusic(audioManager.LoseMusic);
         ANIM.SetTrigger("Die");
     }
 

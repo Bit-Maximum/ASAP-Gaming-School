@@ -5,16 +5,22 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Bootstrup.unity
     guid: 76ec39a88c6f5d7468595a41a910d41c
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 6bf40e0b18c54264392ee7dcde3213dd
   - enabled: 1
-    path: Assets/Scenes/TestLevel.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+    path: Assets/Scenes/Tutorial.unity
+    guid: 868416aa14e43ba498a12fc39dbbc456
+  - enabled: 0
     path: Assets/Scenes/Scene2.unity
     guid: b836c26a1690831448114cb1f8ea1c43
+  - enabled: 1
+    path: Assets/Scenes/Level_1.unity
+    guid: 91f3d7b2e75768e44ad054dd0f84945d
+  - enabled: 1
+    path: Assets/Scenes/TestLevel.unity
+    guid: 8c9cfa26abfee488c85f1582747f6a02
   m_configObjects: {}
