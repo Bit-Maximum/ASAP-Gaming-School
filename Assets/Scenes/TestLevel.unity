@@ -355,7 +355,7 @@ Transform:
   m_GameObject: {fileID: 91632244}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.248638, y: 24.927132, z: -9.659685}
+  m_LocalPosition: {x: -41.648636, y: -54.97287, z: -9.659685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1019,7 +1019,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.248638, y: 24.927132, z: -9.659685}
+  m_LocalPosition: {x: -41.648636, y: -54.97287, z: -9.659685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3999,13 +3999,21 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 500339342}
+    - target: {fileID: 6951577320429218397, guid: 0477c771933cdfc4c803c358d492b4b5, type: 3}
+      propertyPath: m_Type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6951577320429218397, guid: 0477c771933cdfc4c803c358d492b4b5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 6956723651584457307, guid: 0477c771933cdfc4c803c358d492b4b5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 500339342}
     - target: {fileID: 7574030147030632665, guid: 0477c771933cdfc4c803c358d492b4b5, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5080,11 +5088,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7675966843539947625, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -21.54
+      value: -51.94
       objectReference: {fileID: 0}
     - target: {fileID: 7675966843539947625, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.71
+      value: -77.19
       objectReference: {fileID: 0}
     - target: {fileID: 7675966843539947625, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
       propertyPath: m_LocalPosition.z
