@@ -313,7 +313,7 @@ public class PlayerMovement : MonoBehaviour
             ANIM.SetFloat("Run", Mathf.Abs(_moveInput.x));
             if (!IsSprintAnimStarted && LastAccelerateTime < 0)
             {
-                LastAccelerateTime = 1f;
+                LastAccelerateTime = 3f;
                 IsSprintAnimStarted = true;
             }
         }
@@ -518,7 +518,7 @@ public class PlayerMovement : MonoBehaviour
         if (item) //checks if set box overlaps with any Enemy
         {
             Flashlight flashlight = item.GetComponent<Flashlight>();
-            //flashlight.SetDisabled();
+            flashlight.SetDisabled();
             playerStatus.ChangeScoreMultyplier(1);
 
             _canDoAnotherJump = true; //if so we can do another jump in the air
@@ -595,7 +595,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Collider2D playerCollider = GetComponent<BoxCollider2D>();
             Physics2D.IgnoreCollision(playerCollider, platformCollider, true);
-            yield return new WaitForSeconds(0.3f);
+            yield return new WaitForSeconds(0.6f);
             Physics2D.IgnoreCollision(playerCollider, platformCollider, false);
         }
     }

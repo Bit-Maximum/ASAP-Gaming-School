@@ -1,7 +1,10 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
+    Animator ANIM;
+
     public bool IsActive;
 
     private void Awake()
@@ -16,6 +19,7 @@ public class Flashlight : MonoBehaviour
 
     public void SetDisabled()
     {
+        ANIM.SetTrigger("Off");
         IsActive = false;
     }
 }

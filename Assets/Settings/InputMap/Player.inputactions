@@ -146,7 +146,7 @@
                 {
                     "name": "",
                     "id": "8f61bce9-3cba-4807-a366-79244b55239b",
-                    "path": "<Keyboard>/f",
+                    "path": "<Keyboard>/t",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -260,6 +260,17 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "68d73c10-a781-4906-bd0f-2e8f44736b5c",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
                     "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
