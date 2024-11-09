@@ -313,7 +313,7 @@ public class PlayerMovement : MonoBehaviour
             ANIM.SetFloat("Run", Mathf.Abs(_moveInput.x));
             if (!IsSprintAnimStarted && LastAccelerateTime < 0)
             {
-                LastAccelerateTime = 0.3f;
+                LastAccelerateTime = 1f;
                 IsSprintAnimStarted = true;
             }
         }

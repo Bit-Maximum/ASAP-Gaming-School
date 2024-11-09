@@ -1,0 +1,1865 @@
+fileFormatVersion: 2
+guid: 9a6d7627f9b404640b825348629c960c
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Besty 1_0
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 793
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca3e6a591a82a7e4d92e18f9f3da5bd3
+      internalID: -2127601877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_1
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 793
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b896f0afee06e0c47bd2e8a34048b667
+      internalID: 1362534678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_2
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 793
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7add3ddc6bf36cf4ea6d60b708774ac2
+      internalID: -800785893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_3
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 793
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a5ec393d85660d4a8fdff45272ea0f5
+      internalID: 479945296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_4
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 793
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3bd2bd487ed0e449bc754bfbd7454ff
+      internalID: -398574044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_5
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 793
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09259f91882d8fc44b29260f164996d3
+      internalID: -1107166019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_6
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 793
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc019a2fd4aa9384b8adc08684ef219b
+      internalID: -468558181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_7
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 793
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a3c2ae129bfab045815cab51f567dd4
+      internalID: -233189151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_8
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 793
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 095affd51a5b8ef438514134b6d65939
+      internalID: 1620269645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_9
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 729
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3669340242a7a5946b3139a7230e0cc7
+      internalID: -1815327473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 729
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57e7b1d34fc8eb441b1f4c92ead71a44
+      internalID: -1389780578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_11
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 729
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbcc98f56ff000a46a74beaa842d39db
+      internalID: -711100279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_12
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 729
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d4d8508d0008f044a471746c8ae8fd8
+      internalID: -1491626268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_13
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 729
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79569a7f6faabb44cbff06a1156bb665
+      internalID: -1533090416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_14
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 729
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 578b5ae9cb566b94c9b6960b4fa74577
+      internalID: -347885179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_15
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 729
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f0a6b93cb4add64cac83ab20ebf82f1
+      internalID: 763940789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_16
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 729
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8193280f3aa59c74ea6acf42032f08dc
+      internalID: -2082303603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_17
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 729
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 707486a78f21a504a93ca03aa76cc14e
+      internalID: 2140829379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_18
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 665
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0170ecee083d9446b802ed69ca611b8
+      internalID: -1478858720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_19
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 665
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8183402ce7917da45a2ae28ddebfb289
+      internalID: 277317442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_20
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 665
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0b9ea83473bc1d44bc63d172f989b0b
+      internalID: 221532260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_21
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 665
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25893388c3585f244814e8862abcf8cf
+      internalID: -660980624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_22
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 665
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3392cfc77b90dc04584e1a06487a3a4a
+      internalID: 231933797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_23
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 665
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e875ad3c5e58d64d96d65805077a1a5
+      internalID: 2080946801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_24
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 665
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8884bc4e6b2d9f44b7fbacda100f9ed
+      internalID: 934556959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_25
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 665
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4c22545346e8b845bcc17f37f36ba06
+      internalID: -1122738237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_26
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 665
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d98c846e7cefb641a567da023f108db
+      internalID: -2034014538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_27
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 601
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501783629492cb1428ea90e3e9747a87
+      internalID: 1900303100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_28
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 601
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1eaec21c2faf744a24ac899301ec70
+      internalID: -1009656833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_29
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 601
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4596398b84b1b43bcd5b38baeb24c3
+      internalID: -1767480022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_30
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 601
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83e3cf798dd17674c82b15fc6a83a0c1
+      internalID: -1502309190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_31
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 601
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b9ac7dc1e301704189b4ad65ccc7f49
+      internalID: -1420745470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_32
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 601
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25da16b980f1124591bf62c2cc0a6be
+      internalID: -816781677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_33
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 601
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592de12767313904d859360609273ddc
+      internalID: 1151499566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_34
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 601
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c26e6b036108db448e3610f1634a1f8
+      internalID: 1689694865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_35
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 601
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f679d4c1fd6560a489b356bb4543f606
+      internalID: 420953616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_36
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 537
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 421f8e3d017c3f742a95266e2c2fdd5d
+      internalID: 1062824604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_37
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 537
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 966448a3a349442439189f0dc6e34d98
+      internalID: -240690404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_38
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 537
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c28d69f5e801bd343af4e4df590a8268
+      internalID: 1873983872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_39
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 537
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584c7d01eab5393449aa1db86525777c
+      internalID: 2113870877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_40
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 537
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91d3578d04641fa42a1f8ec0b4fadb79
+      internalID: 620352844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_41
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 537
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5af9212a4a03fd46a2433bc5b5e3ace
+      internalID: 1576719166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_42
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 537
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2db101a0b6029d49ab6920f856305a8
+      internalID: 651738308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_43
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 537
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6a80cc25355a54abed0a3e5d065894
+      internalID: -1292850041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_44
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 537
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcdf6fff2c722e9429ef66d3dd55de05
+      internalID: -1432117746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_45
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 473
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97707c3ff62d9044894719413a9ee48c
+      internalID: -1783415119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_46
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 473
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f72c9b6eaa030ea4ba4e4c4d9de249b1
+      internalID: -1859260657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_47
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 473
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea13da5c31c25241b6dce10252eb037
+      internalID: -1824297307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_48
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 473
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db2e5863be15c2c4881472103c81667a
+      internalID: 179105817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_49
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 473
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8642e744cc7703648b877ddc3e8275d1
+      internalID: 1828466815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_50
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 473
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7fdaca819ad994bb7b5fd5afc04b2c
+      internalID: 396241342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_51
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 473
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9299c742f723b7c49878b4f03b5afe4b
+      internalID: -746574500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_52
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 473
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43d54394b9e9a434aa0207372dcb8476
+      internalID: -1447109097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_53
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 409
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c96ab063e260b449adf6ddf1fafeed
+      internalID: -721187741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_54
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 409
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a211cf9700bd5c446adf017fdc875be9
+      internalID: 1287990177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_55
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 409
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a323a7a3e863644bd6e0b46c72aac3
+      internalID: 1200225566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_56
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 409
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76db97107d4d894683b79098a5adef8
+      internalID: -1994078844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_57
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 409
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6499296d76e4047876d4dbe3f16875
+      internalID: -419101484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_58
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 409
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d21576b5520c4904c825e6f491f01792
+      internalID: 1439895977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_59
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 409
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a87d342da945fcf4e92d2ce666bd3488
+      internalID: 1613286280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_60
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 409
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374855524e10b25438644fff098208d4
+      internalID: 1128895892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_61
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 409
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5b93b650dfa70418934c1e3bc95390
+      internalID: 1230302966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_62
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 345
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fafe755cfecb4e94e956597c4c15b0b0
+      internalID: 577763934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_63
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 345
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3d51546472fbcc42aeb704e42852b50
+      internalID: 246049345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_64
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 345
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af74d68e23f4f248ba223109a850396
+      internalID: 1441465975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_65
+      rect:
+        serializedVersion: 2
+        x: 1088
+        y: 345
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16162c09df459bc41a8a2ed396ae39bc
+      internalID: -443447852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_66
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 345
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2262ed4f744d134ca7500f0f9e130f1
+      internalID: -2114348909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_67
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 345
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dc47f397226f5d47a595d10b8da7b44
+      internalID: -1788826894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_68
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 345
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d622529d5c4658547bc97687cb742e7f
+      internalID: -1047610157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_69
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 345
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03839197bcba447459e6a0223869fd84
+      internalID: 692300513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_70
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 345
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f0dcf419edd31c4587f91b1160c7936
+      internalID: -622259156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_71
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 217
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 182b4bbc05c11a94d935d0ce3e6c4e3d
+      internalID: 143133111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_72
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 217
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48b14272a37d0f949b2c7206af4dbae4
+      internalID: -523211975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_73
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 217
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af6d538968c32fa46895b07bfae5651b
+      internalID: -798254571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_74
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 217
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2725e034ad4fb940b1a96f5c418f422
+      internalID: 1257769343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_75
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 217
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295eced057b66a54ab93fb7ab610cd9a
+      internalID: -1041640834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_76
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 217
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6c85e8af6be96f438aeb967842255d4
+      internalID: -1137721622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_77
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 217
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702b2be45899d214ca54d4d1fbff2100
+      internalID: -991270691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Besty 1_78
+      rect:
+        serializedVersion: 2
+        x: 832
+        y: 217
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6df48c6eeffa846a67b5fef4423304
+      internalID: -881672065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Besty 1_0: -2127601877
+      Besty 1_1: 1362534678
+      Besty 1_10: -1389780578
+      Besty 1_11: -711100279
+      Besty 1_12: -1491626268
+      Besty 1_13: -1533090416
+      Besty 1_14: -347885179
+      Besty 1_15: 763940789
+      Besty 1_16: -2082303603
+      Besty 1_17: 2140829379
+      Besty 1_18: -1478858720
+      Besty 1_19: 277317442
+      Besty 1_2: -800785893
+      Besty 1_20: 221532260
+      Besty 1_21: -660980624
+      Besty 1_22: 231933797
+      Besty 1_23: 2080946801
+      Besty 1_24: 934556959
+      Besty 1_25: -1122738237
+      Besty 1_26: -2034014538
+      Besty 1_27: 1900303100
+      Besty 1_28: -1009656833
+      Besty 1_29: -1767480022
+      Besty 1_3: 479945296
+      Besty 1_30: -1502309190
+      Besty 1_31: -1420745470
+      Besty 1_32: -816781677
+      Besty 1_33: 1151499566
+      Besty 1_34: 1689694865
+      Besty 1_35: 420953616
+      Besty 1_36: 1062824604
+      Besty 1_37: -240690404
+      Besty 1_38: 1873983872
+      Besty 1_39: 2113870877
+      Besty 1_4: -398574044
+      Besty 1_40: 620352844
+      Besty 1_41: 1576719166
+      Besty 1_42: 651738308
+      Besty 1_43: -1292850041
+      Besty 1_44: -1432117746
+      Besty 1_45: -1783415119
+      Besty 1_46: -1859260657
+      Besty 1_47: -1824297307
+      Besty 1_48: 179105817
+      Besty 1_49: 1828466815
+      Besty 1_5: -1107166019
+      Besty 1_50: 396241342
+      Besty 1_51: -746574500
+      Besty 1_52: -1447109097
+      Besty 1_53: -721187741
+      Besty 1_54: 1287990177
+      Besty 1_55: 1200225566
+      Besty 1_56: -1994078844
+      Besty 1_57: -419101484
+      Besty 1_58: 1439895977
+      Besty 1_59: 1613286280
+      Besty 1_6: -468558181
+      Besty 1_60: 1128895892
+      Besty 1_61: 1230302966
+      Besty 1_62: 577763934
+      Besty 1_63: 246049345
+      Besty 1_64: 1441465975
+      Besty 1_65: -443447852
+      Besty 1_66: -2114348909
+      Besty 1_67: -1788826894
+      Besty 1_68: -1047610157
+      Besty 1_69: 692300513
+      Besty 1_7: -233189151
+      Besty 1_70: -622259156
+      Besty 1_71: 143133111
+      Besty 1_72: -523211975
+      Besty 1_73: -798254571
+      Besty 1_74: 1257769343
+      Besty 1_75: -1041640834
+      Besty 1_76: -1137721622
+      Besty 1_77: -991270691
+      Besty 1_78: -881672065
+      Besty 1_8: 1620269645
+      Besty 1_9: -1815327473
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

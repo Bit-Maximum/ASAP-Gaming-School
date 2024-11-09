@@ -33,6 +33,7 @@ public class PlayerStatus : MonoBehaviour
 
     [SerializeField][Range(0.1f, 1f)] private float StunnedSlowTimeScale;
     [SerializeField] private float StunnedSlowTimeDuration;
+    [SerializeField] private float ImuneTimeDuration;
 
     public Vector2 TakeAttackDamageFeedbackForce;
     public Vector2 TakeTaranDamageFeedbackForce;
@@ -42,6 +43,7 @@ public class PlayerStatus : MonoBehaviour
     private float LastComboTime = 0;
     private float LastStunnedTime = 0;
     private float LastTimeSlowed = 0;
+    private float LastTimeTakenDamage = 0;
 
     private void Awake()
     {
@@ -62,6 +64,7 @@ public class PlayerStatus : MonoBehaviour
         LastComboTime -= Time.deltaTime;
         LastStunnedTime -= Time.deltaTime;
         LastTimeSlowed -= Time.deltaTime;
+        LastTimeTakenDamage -= Time.deltaTime;
     }
 
     private void FixedUpdate()
@@ -95,11 +98,15 @@ public class PlayerStatus : MonoBehaviour
 
     public void TakeDamage(int amount)
     {
-        audioManager.PlaySFX(audioManager.Hurt);
-        maxHealth -= amount;
-        if (maxHealth <= 0)
-            Die();
-        HealthText.text = $"Healt: {maxHealth}";
+        if (LastTimeTakenDamage < 0)
+        {
+            audioManager.PlaySFX(audioManager.Hurt);
+            maxHealth -= amount;
+            if (maxHealth <= 0)
+                Die();
+            HealthText.text = $"Healt: {maxHealth}";
+            LastTimeTakenDamage = ImuneTimeDuration;
+        }
     }
 
     public void Heal(int amount)

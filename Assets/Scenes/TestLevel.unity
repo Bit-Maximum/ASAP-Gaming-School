@@ -5296,6 +5296,10 @@ PrefabInstance:
       propertyPath: BallsLeftText
       value: 
       objectReference: {fileID: 6164624988128974627}
+    - target: {fileID: 3530564388180456004, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
+      propertyPath: ImuneTimeDuration
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3536240794806668696, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -5317,8 +5321,20 @@ PrefabInstance:
       value: 1.4
       objectReference: {fileID: 0}
     - target: {fileID: 4125246804767641550, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
+      propertyPath: _frontAttackCheckSize.x
+      value: 2.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125246804767641550, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
+      propertyPath: _frontAttackCheckSize.y
+      value: 3.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125246804767641550, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
       propertyPath: _InteractiveLayer.m_Bits
       value: 4096
+      objectReference: {fileID: 0}
+    - target: {fileID: 4125246804767641550, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
+      propertyPath: _bottomAttackCheckSize.y
+      value: 2.02
       objectReference: {fileID: 0}
     - target: {fileID: 4184919610501586038, guid: c6b883f84df12114cb92f803ec98ba82, type: 3}
       propertyPath: m_LocalPosition.x

@@ -233,6 +233,39 @@
                 },
                 {
                     "name": "",
+                    "id": "65ecbfc9-46d1-455a-a9e0-0e1ea0995e6a",
+                    "path": "<Keyboard>/k",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "87116408-2b62-4cbc-9c83-266b2c8d7435",
+                    "path": "<Keyboard>/j",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a7307ae1-c2fd-4d4d-a543-e00cd280643f",
+                    "path": "<Keyboard>/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "cd7575e2-4a17-444b-a043-23dbae17c0cb",
                     "path": "<Keyboard>/space",
                     "interactions": "",
