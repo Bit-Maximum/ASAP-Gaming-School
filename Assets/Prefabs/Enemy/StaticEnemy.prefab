@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 10
   scoreMultyplier: 1
-  maxHealth: 5
+  maxHealth: 2
   StunDuration: 2
   IsStuned: 0
 --- !u!1 &5647712873244611702

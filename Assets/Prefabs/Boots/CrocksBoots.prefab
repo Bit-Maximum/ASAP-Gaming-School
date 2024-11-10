@@ -144,4 +144,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bootSprite: {fileID: 21300000, guid: 9ab8c98e872207241b2f362546cbea44, type: 3}
-  bootsLogic: {fileID: 0}
+  bootsLogic: {fileID: 4544544197344916913, guid: c8ff543114dcc744291713e45798aa9b, type: 3}
