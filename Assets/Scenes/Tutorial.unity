@@ -1186,7 +1186,7 @@ Transform:
   m_GameObject: {fileID: 413298970}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.392803, y: -54.744835, z: -9.659685}
+  m_LocalPosition: {x: -42.392574, y: -54.744835, z: -9.659685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1768,7 +1768,7 @@ Transform:
   m_GameObject: {fileID: 588947376}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.392803, y: -54.744835, z: -9.659685}
+  m_LocalPosition: {x: -42.392574, y: -54.744835, z: -9.659685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23267,6 +23267,7 @@ MonoBehaviour:
   Jump: {fileID: 8300000, guid: 1b259db12f9ae3346a6b773eea4b01c2, type: 3}
   PickUp: {fileID: 8300000, guid: 99289d1e5b5b5cc4e924fc95d050869e, type: 3}
   Walk: {fileID: 8300000, guid: c4e17d91f1910e14f84592279122ad91, type: 3}
+  Run: {fileID: 8300000, guid: a154f7849522a0a44a291a290d70b369, type: 3}
   EnFrontAttack: {fileID: 8300000, guid: 1da56f1b8295ff64f89974d700b423b5, type: 3}
   EnHurt: {fileID: 8300000, guid: b0de5e41bb1f9bb48be9a0702b53cff2, type: 3}
 --- !u!82 &3896032855410257886

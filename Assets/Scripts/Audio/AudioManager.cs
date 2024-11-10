@@ -20,6 +20,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip Jump;
     public AudioClip PickUp;
     public AudioClip Walk;
+    public AudioClip Run;
 
     [Header("- Enemy -")]
     public AudioClip EnFrontAttack;

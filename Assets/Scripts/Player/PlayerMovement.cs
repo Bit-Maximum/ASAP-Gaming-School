@@ -290,6 +290,7 @@ public class PlayerMovement : MonoBehaviour
             IsSprinting = true;
             IsSprintAnimStarted = false;
             ANIM.SetBool("Sprinting", true);
+            audioManager.PlaySFX(audioManager.Run);
         }
 
         //Handle Run
@@ -430,7 +431,16 @@ public class PlayerMovement : MonoBehaviour
         //Convert this to a vector and apply to rigidbody
         RB.AddForce(movement * Vector2.right, ForceMode2D.Force);
         if (RB.velocity.x != 0)
-            audioManager.PlayColapsSFX(audioManager.Walk);
+        {
+            if (IsSprinting)
+            {
+                audioManager.PlayColapsSFX(audioManager.Run);
+            }
+            else
+            {
+                audioManager.PlayColapsSFX(audioManager.Walk);
+            }
+        }
         /*
 		 * For those interested here is what AddForce() will do
 		 * RB.velocity = new Vector2(RB.velocity.x + (Time.fixedDeltaTime  * speedDif * accelRate) / RB.mass, RB.velocity.y);
@@ -518,10 +528,13 @@ public class PlayerMovement : MonoBehaviour
         if (item) //checks if set box overlaps with any Enemy
         {
             Flashlight flashlight = item.GetComponent<Flashlight>();
-            flashlight.SetDisabled();
-            playerStatus.ChangeScoreMultyplier(1);
+            if (flashlight.IsActive)
+            {
+                flashlight.SetDisabled();
+                playerStatus.ChangeScoreMultyplier(1);
 
-            _canDoAnotherJump = true; //if so we can do another jump in the air
+                _canDoAnotherJump = true; //if so we can do another jump in the air
+            }
         }
     }
 
