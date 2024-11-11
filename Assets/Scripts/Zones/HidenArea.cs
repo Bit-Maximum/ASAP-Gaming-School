@@ -34,9 +34,9 @@ public class HidenArea : MonoBehaviour
             MAP.color = tranparent;
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (TryGetComponent<PlayerMovement>(out var playerMovement))
-            MAP.color = visible;
-    }
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    if (TryGetComponent<PlayerMovement>(out var playerMovement))
+    //        MAP.color = visible;
+    //}
 }

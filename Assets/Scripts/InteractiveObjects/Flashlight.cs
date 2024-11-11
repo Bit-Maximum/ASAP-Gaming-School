@@ -10,7 +10,6 @@ public class Flashlight : MonoBehaviour
     private void Awake()
     {
         ANIM = GetComponent<Animator>();
-        
         IsActive = true;
     }
     private void Start()
@@ -20,7 +19,6 @@ public class Flashlight : MonoBehaviour
 
     public void SetActive()
     {
-
         IsActive = true;
     }
 

@@ -538,7 +538,7 @@ public class PlayerMovement : MonoBehaviour
             if (flashlight.IsActive)
             {
                 flashlight.SetDisabled();
-                playerStatus.ChangeScoreMultyplier(1);
+                playerStatus.ChangeScoreMultyplier(0);
 
                 _canDoAnotherJump = true; //if so we can do another jump in the air
             }
