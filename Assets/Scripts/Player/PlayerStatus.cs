@@ -104,7 +104,7 @@ public class PlayerStatus : MonoBehaviour
             maxHealth -= amount;
             if (maxHealth <= 0)
                 Die();
-            HealthText.text = $"Healt: {maxHealth}";
+            HealthText.text = $"{maxHealth}";
             LastTimeTakenDamage = ImuneTimeDuration;
         }
     }
@@ -112,7 +112,7 @@ public class PlayerStatus : MonoBehaviour
     public void Heal(int amount)
     {
         maxHealth += amount;
-        HealthText.text = $"Healt: {maxHealth}";
+        HealthText.text = $"{maxHealth}";
     }
 
     public void DropScoreMultyplier()
