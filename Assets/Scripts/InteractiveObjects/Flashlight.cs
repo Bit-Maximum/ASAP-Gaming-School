@@ -9,7 +9,6 @@ public class Flashlight : MonoBehaviour
 
     private void Awake()
     {
-        Debug.Log("Awake");
         ANIM = GetComponent<Animator>();
         
         IsActive = true;
@@ -21,15 +20,13 @@ public class Flashlight : MonoBehaviour
 
     public void SetActive()
     {
-        Debug.Log("Active");
 
         IsActive = true;
     }
 
     public void SetDisabled()
     {
-        Debug.Log("Disable");
         ANIM.SetTrigger("Off");
-        IsActive = false;
+        IsActive = true;
     }
 }

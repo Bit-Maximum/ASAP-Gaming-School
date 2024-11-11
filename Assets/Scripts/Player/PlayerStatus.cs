@@ -93,7 +93,7 @@ public class PlayerStatus : MonoBehaviour
     public void ChageScore(int amount)
     {
         score += amount * scoreMultyplier;
-        ScoreText.text = $"Score: {score}";
+        ScoreText.text = $"Счёт: {score}";
     }
 
     public void TakeDamage(int amount)
@@ -120,7 +120,7 @@ public class PlayerStatus : MonoBehaviour
         scoreMultyplier = scoreBaseMultyplier;
         if (scoreMultyplier > 1)
         {
-            ComboText.text = $"{scoreMultyplier}xCombo";
+            ComboText.text = $"{scoreMultyplier}xКомбо";
         } else
         {
             ComboText.text = "";
@@ -137,7 +137,7 @@ public class PlayerStatus : MonoBehaviour
         }
         else
         {
-            ComboText.text = $"{scoreMultyplier}xCombo";
+            ComboText.text = $"{scoreMultyplier}xКомбо";
 
         }
     }
@@ -146,13 +146,13 @@ public class PlayerStatus : MonoBehaviour
     {
         --ballsLeft;
         ++ballsCounter;
-        BallsLeftText.text = $"Осталось клубков: {ballsLeft}";
+        BallsLeftText.text = $"{ballsCounter}";
     }
 
     public void SetBallsLeftCounter(int newValue)
     {
         ballsLeft = newValue;
-        BallsLeftText.text = $"Осталось клубков: {ballsLeft}";
+        BallsLeftText.text = $"{ballsCounter}";
     }
 
     public void StunAttackPlayer(int fromDirection)
@@ -196,7 +196,7 @@ public class PlayerStatus : MonoBehaviour
     #region SHOW IN UI METHODS
     private void ShowBallsLeft()
     {
-        BallsLeftText.text = $"Осталось клубков: {ballsLeft}";
+        BallsLeftText.text = $"{ballsCounter}";
     }
     #endregion
 
@@ -245,7 +245,7 @@ public class PlayerStatus : MonoBehaviour
         globalLight.ResetGamma();
     }
 
-    private void Die()
+    public void Die()
     {
         audioManager.PlayMusic(audioManager.LoseMusic);
         ANIM.SetTrigger("Die");

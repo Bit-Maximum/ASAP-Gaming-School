@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor.PackageManager;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -320,6 +321,12 @@ public class PlayerMovement : MonoBehaviour
         }
 
         
+    }
+
+    private void OnExit(InputValue value)
+    {
+        Debug.Log("Exit");
+        playerStatus.Die();
     }
 
     private void OnLook(InputValue value)

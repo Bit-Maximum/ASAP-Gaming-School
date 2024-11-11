@@ -21,6 +21,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip PickUp;
     public AudioClip Walk;
     public AudioClip Run;
+    public AudioClip Rock;
+    public AudioClip Silent;
 
     [Header("- Enemy -")]
     public AudioClip EnFrontAttack;

@@ -8,7 +8,7 @@ public class Boots : MonoBehaviour
     [SerializeField] private GameObject bootsLogic;
     private AudioManager audioManager;
 
-    private float PikedDelay = 1.5f;
+    private float PikedDelay = 1f;
     private float LastPickedTime = 0;
     private bool isReady = true;
 

@@ -23856,6 +23856,8 @@ MonoBehaviour:
   PickUp: {fileID: 8300000, guid: 99289d1e5b5b5cc4e924fc95d050869e, type: 3}
   Walk: {fileID: 8300000, guid: c4e17d91f1910e14f84592279122ad91, type: 3}
   Run: {fileID: 8300000, guid: a154f7849522a0a44a291a290d70b369, type: 3}
+  Rock: {fileID: 8300000, guid: 2a26ce41ddabe3f4bb03efcdce3de8ff, type: 3}
+  Silent: {fileID: 8300000, guid: d7a8a808e1d410d469ef3c3d9e8c94be, type: 3}
   EnFrontAttack: {fileID: 8300000, guid: 1da56f1b8295ff64f89974d700b423b5, type: 3}
   EnHurt: {fileID: 8300000, guid: b0de5e41bb1f9bb48be9a0702b53cff2, type: 3}
 --- !u!82 &3896032855410257886
@@ -23870,7 +23872,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.596
+  m_Volume: 0.25
   m_Pitch: 1
   Loop: 0
   Mute: 0
