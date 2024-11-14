@@ -195,7 +195,7 @@ PrefabInstance:
     - target: {fileID: 565386077763194482, guid: bc249642a9d9afb45ae87f3e9bb19909, type: 3}
       propertyPath: bootsLogic
       value: 
-      objectReference: {fileID: 5489763814809141844, guid: 68f1d7e0d70223549b854e4df0494842, type: 3}
+      objectReference: {fileID: 447344765}
     - target: {fileID: 1948137541726005727, guid: bc249642a9d9afb45ae87f3e9bb19909, type: 3}
       propertyPath: m_LocalPosition.x
       value: 11.034729
@@ -1331,7 +1331,7 @@ Transform:
   m_GameObject: {fileID: 413298970}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.389076, y: -54.744835, z: -9.659685}
+  m_LocalPosition: {x: -42.389366, y: -54.744835, z: -9.659685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1917,7 +1917,7 @@ Transform:
   m_GameObject: {fileID: 588947376}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -42.389076, y: -54.744835, z: -9.659685}
+  m_LocalPosition: {x: -42.389366, y: -54.744835, z: -9.659685}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2075,7 +2075,7 @@ PrefabInstance:
     - target: {fileID: 565386077763194482, guid: 9c79b8855e1620e46b4343915c817920, type: 3}
       propertyPath: bootsLogic
       value: 
-      objectReference: {fileID: 5489763814809141844, guid: 68f1d7e0d70223549b854e4df0494842, type: 3}
+      objectReference: {fileID: 447344765}
     - target: {fileID: 1181612171292216995, guid: 9c79b8855e1620e46b4343915c817920, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -2228,7 +2228,7 @@ PrefabInstance:
     - target: {fileID: 565386077763194482, guid: 0b51150ac30d94049917a474de0d23a3, type: 3}
       propertyPath: bootsLogic
       value: 
-      objectReference: {fileID: 5489763814809141844, guid: 68f1d7e0d70223549b854e4df0494842, type: 3}
+      objectReference: {fileID: 447344765}
     - target: {fileID: 1181612171292216995, guid: 0b51150ac30d94049917a474de0d23a3, type: 3}
       propertyPath: m_Sprite
       value: 
