@@ -344,11 +344,24 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnJumpPress(InputValue value)
     {
+        Collider2D item = Physics2D.OverlapBox(_bottomAttackCheckPoint.position, _bottomAttackCheckSize, 0, _InteractiveLayer);
+        if (item) //checks if set box overlaps with any Enemy
+        {
+            Flashlight flashlight = item.GetComponent<Flashlight>();
+            if (flashlight.IsActive)
+            {
+                flashlight.SetDisabled();
+                playerStatus.ChangeScoreMultyplier(0);
+
+                _canDoAnotherJump = true; //if so we can do another jump in the air
+            }
+        }
         LastPressedJumpTime = Data.jumpInputBufferTime;
     }
 
     private void OnJumpRelease(InputValue value)
     {
+        
         if (CanJumpCut() || CanWallJumpCut())
             _isJumpCut = true;
     }
@@ -629,6 +642,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool CanJump()
     {
+        
+
         return (LastOnGroundTime > 0 && !IsJumping) || _canDoAnotherJump;
     }
 
