@@ -18,6 +18,8 @@ The game was presented at the final demo session and is available to play online
 🌐 **Play directly in your browser:**  
 👉 [https://thethirdonetoldthetruth.itch.io/klubki-da-kabluki](https://thethirdonetoldthetruth.itch.io/klubki-da-kabluki)
 
+https://github.com/user-attachments/assets/3f0dc83b-ba03-4c4e-95c3-c809140ed7bc
+
 ---
 
 ## 🧵 Story
