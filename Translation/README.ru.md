@@ -18,6 +18,8 @@
 🌐 **Играть прямо в браузере:**  
 👉 [https://thethirdonetoldthetruth.itch.io/klubki-da-kabluki](https://thethirdonetoldthetruth.itch.io/klubki-da-kabluki)
 
+https://github.com/user-attachments/assets/3f0dc83b-ba03-4c4e-95c3-c809140ed7bc
+
 ---
 
 ## 🧵 Сюжет
